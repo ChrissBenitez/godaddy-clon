@@ -11,6 +11,9 @@
             rel="stylesheet">
         <link href="https://db.onlinewebfonts.com/c/8a86b3e611f41da6ca263bf6c73dc65b?family=GDSage-Bold"
             rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 
     <body>
@@ -19,7 +22,7 @@
                 <div class="top-header">
                     <div class="top-header-left">
                         <img class="logo" src="img/logo-white.png" alt="Logo Godaddy" width="auto" height="40px">
-                        <ul class="main-menu">
+                        <ul id="mobile-menu" class="main-menu hide-mobile">
                             <li class="menu-item"><a href="#">Domains</a></li>
                             <li class="menu-item"><a href="#">Websites</a></li>
                             <li class="menu-item"><a href="#">Hosting and Security</a></li>
@@ -27,13 +30,16 @@
                             <li class="menu-item"><a href="#">EMail</a></li>
                             <li class="menu-item"><a href="#">GoDaddy Airo</a></li>
                             <li class="menu-item"><a href="#">Pricing</a></li>
-
                         </ul>
                     </div>
-                    <div class="top-header-right menu-item">
+                    <div class="top-header-right menu-item hide-mobile">
                         <a href="#">Help</a>
                         <a href="#">Sign in</a>
                     </div>
+
+                    <a href="javascript:void(0);" class="menu-mobile" onclick="showMobileMenu()">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </div>
             </div>
         </header>
@@ -121,40 +127,56 @@
 
             <section class="gd-airo main-container">
                 <h2>Get more done with GoDaddy Airo.</h2>
-                <img src="/img/gd-airo.webp" alt="">
+                <img id="gd-airo-image" class="hide-mobile" src="/img/gd-airo.webp" alt="">
                 <div class="gd-airo-columns">
-                    <div class="gd-airo-columns-content">
+                    <div onmouseover="changeAiro('1')" class="gd-airo-columns-content">
+                        <img class="hide-desktop show-mobile" src="/img/gd-airo.webp" alt="">
                         <h3>Overcome the blank page.</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quas maxime laboriosam nostrum
                             temporibus consequuntur fuga pariatur facilis nulla! Voluptatibus exercitationem illum iusto
                             ex mollitia natus asperiores! Optio, cupiditate est.</p>
                     </div>
-                    <div class="gd-airo-columns-content">
+                    <div onmouseover="changeAiro('2')" class="gd-airo-columns-content">
+                        <img class="hide-desktop show-mobile" src="/img/hp-airo-prod-feat-2-landscape.jpg" alt="">
                         <h3>Save time, Gain momentum.</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id perspiciatis ratione est quia in
                             perferendis incidunt qui ex dolorem, animi pariatur nam aspernatur! Itaque reprehenderit
                             consequuntur nostrum numquam velit assumenda!</p>
                     </div>
-                    <div class="gd-airo-columns-content gray-bg">
+                    <div onmouseover="changeAiro('3')" class="gd-airo-columns-content">
+                        <img class="hide-desktop show-mobile" src="/img/hp-airo-prod-feat-1-landscape.jpg" alt="">
                         <h3>Use our AI for 28% more sales.</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos minus nam laborum est sunt
                             maxime veritatis repellat quas, quam quasi distinctio deserunt ipsum facere atque molestias
                             libero. Voluptatibus, deserunt ad!</p>
                     </div>
                 </div>
-                <a href="#" class="main-button">Start With AI Domain Search</a>
+                <button href="#" class="main-button">Start With AI Domain Search</button>
             </section>
 
             <section class="templates">
                 <h2>Templates designed to sell</h2>
                 <p>Choose from 100s of designs for every idea and industry.</p>
                 <div class="templates-slider">
-                    <img src="/img/kobookstoretemplate_mobile.webp" alt="">
-                    <img src="/img/kobookstoretemplate_mobile.webp" alt="">
-                    <img src="/img/kobookstoretemplate_mobile.webp" alt="">
-                    <img src="/img/kobookstoretemplate_mobile.webp" alt="">
+                    <div class="templates-slide-track">
+                        <div class="templates-slide-track-image">
+                            <img src="/img/templates-1.webp" alt="">
+                        </div>
+                        <div class="templates-slide-track-image">
+                            <img src="/img/templates-2.webp" alt="">
+                        </div>
+                        <div class="templates-slide-track-image">
+                            <img src="/img/templates-3.webp" alt="">
+                        </div>
+                        <div class="templates-slide-track-image">
+                            <img src="/img/templates-4.webp" alt="">
+                        </div>
+                        <div class="templates-slide-track-image">
+                            <img src="/img/templates-5.webp" alt="">
+                        </div>
+                    </div>
                 </div>
-                <a class="main-button" href="#">Browse All templates</a>
+                <button class="main-button" href="#">Browse All templates</button>
             </section>
 
             <section class="lucinda">
@@ -213,7 +235,13 @@
                             <div class="trustpilot-title">
                                 GODADDY HAS MADE EVERYTHING SO EASY!!
                             </div>
-                            <div class="trustpilot-note"></div>
+                            <div class="trust-pilot-rating">
+                                <img src="/img/icon-trustpilot.svg" alt="">
+                                <img src="/img/icon-trustpilot.svg" alt="">
+                                <img src="/img/icon-trustpilot.svg" alt="">
+                                <img src="/img/icon-trustpilot.svg" alt="">
+                                <img src="/img/icon-trustpilot-half.svg" alt="">
+                            </div>
                             <div class="trustpilot-review">
                                 Godaddy has made creating a beautiful & professional looking website so easy! The email
                                 setup was quick too. Anytime I've had a question or even once a technical issue they
@@ -226,7 +254,13 @@
                             <div class="trustpilot-title">
                                 GODADDY HAS MADE EVERYTHING SO EASY!!
                             </div>
-                            <div class="trustpilot-note"></div>
+                            <div class="trust-pilot-rating">
+                                <img src="/img/icon-trustpilot.svg" alt="">
+                                <img src="/img/icon-trustpilot.svg" alt="">
+                                <img src="/img/icon-trustpilot.svg" alt="">
+                                <img src="/img/icon-trustpilot.svg" alt="">
+                                <img src="/img/icon-trustpilot-half.svg" alt="">
+                            </div>
                             <div class="trustpilot-review">
                                 Great approach for the small business. Nicely packaged to get email and website up and
                                 running quickly.
@@ -279,7 +313,7 @@
                         or not.</p>
                     <p class="mb-32">Get in touch at 1-480-366-3546</p>
 
-                    <a class="main-button" href="#">Visit Help Center</a>
+                    <button class="main-button" href="#">Visit Help Center</button>
                 </div>
             </section>
 
@@ -468,6 +502,8 @@
                 </div>
             </footer>
         </main>
+
+        <script src="js.js"></script>
     </body>
 
 </html>
