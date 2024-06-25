@@ -70,13 +70,16 @@ button {
   content: "";
   height: 0.75rem;
   width: 1.25rem;
-  background-image: url(/img/arrow-button.svg);
+  background-image: url(img/arrow-button.svg);
   background-repeat: no-repeat;
   inset-inline-end: 1em;
   opacity: 0;
-  -webkit-transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1), -webkit-transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
-  -webkit-transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1), transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
-  transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1), transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1),
+    -webkit-transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, opacity;
 }
 
@@ -172,7 +175,7 @@ button {
 }
 
 .domain-searcher .domain-searcher-left .domain-searcher-button {
-  background-color: #00838C;
+  background-color: #00838c;
   color: white;
   border-radius: 16px;
   border: none;
@@ -213,7 +216,7 @@ button {
 
 .intro .intro-left {
   background-color: gray;
-  background-image: url("/img/intro-bg.webp");
+  background-image: url("img/intro-bg.webp");
   background-size: cover;
   background-position: center;
   padding: 36px;
@@ -320,17 +323,17 @@ button {
 
 .blog .blog-grid .grid-1 {
   grid-area: recent;
-  background: url("/img/article-1.webp");
+  background: url("img/article-1.webp");
 }
 
 .blog .blog-grid .grid-2 {
   grid-area: article2;
-  background: url("/img/article-2.webp");
+  background: url("img/article-2.webp");
 }
 
 .blog .blog-grid .grid-3 {
   grid-area: article3;
-  background: url("/img/article-3.webp");
+  background: url("img/article-3.webp");
 }
 
 .blog .blog-grid .blog-grid-article {
@@ -428,7 +431,8 @@ button {
   position: relative;
 }
 
-.templates .templates-slider::before, .templates .templates-slider::after {
+.templates .templates-slider::before,
+.templates .templates-slider::after {
   content: "";
   height: 100px;
   position: absolute;
@@ -473,7 +477,7 @@ button {
 
 .lucinda .lucinda-container {
   background-color: #f3f3f3;
-  background-image: url("/img/Lucinda-Hinojos-D.webp");
+  background-image: url("img/Lucinda-Hinojos-D.webp");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 16px;
@@ -525,8 +529,15 @@ button {
   margin-bottom: 8px;
 }
 
-.lucinda .lucinda-container .lucinda-right .lucinda-bottom .lucinda-bottom-left .icons-lucinda li img {
-  background-color: #D8EFEF;
+.lucinda
+  .lucinda-container
+  .lucinda-right
+  .lucinda-bottom
+  .lucinda-bottom-left
+  .icons-lucinda
+  li
+  img {
+  background-color: #d8efef;
   padding: 6px;
   border-radius: 8px;
 }
@@ -610,13 +621,13 @@ button {
 
 .work-gd .work-grid .grid-first {
   grid-area: first;
-  background: url("/img/work-gd-1.webp");
+  background: url("img/work-gd-1.webp");
   color: white;
 }
 
 .work-gd .work-grid .grid-second {
   grid-area: second;
-  background: url("/img/work-gd-2.webp");
+  background: url("img/work-gd-2.webp");
   color: white;
 }
 
@@ -636,7 +647,7 @@ button {
 .work-gd .work-grid .grid-double {
   grid-area: double;
   width: auto;
-  background: url("/img/work-gd-3.webp");
+  background: url("img/work-gd-3.webp");
   background-position: top;
   display: flex;
   align-items: center;
@@ -667,7 +678,7 @@ button {
 }
 
 .hero-contact {
-  background: url("/img//hero-contact.webp");
+  background: url("img//hero-contact.webp");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -724,7 +735,7 @@ button {
 }
 
 .faq .faq-container summary::after {
-  content: ' ◄';
+  content: " ◄";
   float: right;
 }
 
@@ -986,7 +997,7 @@ footer .copyright .copyright-right a:hover {
     height: 24px;
   }
   .intro .intro-left {
-    background-image: url("/img/intro-mobile.webp");
+    background-image: url("img/intro-mobile.webp");
   }
   .intro .intro-left .intro-left-content {
     max-width: 100%;
@@ -1067,14 +1078,14 @@ footer .copyright .copyright-right a:hover {
   }
   .work-gd .work-grid .grid-double {
     display: block;
-    background-image: url("/img/work-gd-3-mobile.webp");
+    background-image: url("img/work-gd-3-mobile.webp");
   }
   .work-gd .work-grid .grid-double h3 {
     max-width: 100%;
   }
   .hero-contact {
     flex-direction: column;
-    background: url("/img//hero-contact-mobile.webp");
+    background: url("img//hero-contact-mobile.webp");
     background-size: contain;
     min-height: 510px;
     background-repeat: no-repeat;
